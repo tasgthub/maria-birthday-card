@@ -30,6 +30,7 @@ function showPage(next) {
 document.getElementById('next').addEventListener('click', () => showPage(current + 1));
 document.getElementById('prev').addEventListener('click', () => showPage(current - 1));
 document.getElementById('restart').addEventListener('click', () => showPage(0));
+document.getElementById('restartLetter').addEventListener('click', () => showPage(0));
 document.getElementById('friendNameHero').textContent = PERSONAL.friendName;
 document.getElementById('friendNameWish').textContent = PERSONAL.friendName;
 document.getElementById('friendNameFinal').textContent = PERSONAL.friendName;
@@ -67,6 +68,16 @@ document.addEventListener('keydown', event => {
 });
 dots[0].classList.add('active');
 document.getElementById('prev').disabled = true;
+
+const envelopeButton = document.getElementById('openLetter');
+envelopeButton.addEventListener('click', () => {
+  const isOpen = envelopeButton.classList.toggle('open');
+  envelopeButton.setAttribute('aria-expanded', String(isOpen));
+  document.getElementById('letterMessage').classList.toggle('revealed', isOpen);
+  document.querySelector('.letter-instruction').textContent = isOpen
+    ? 'A little love, tucked inside just for you ♡'
+    : 'Tap the envelope to open your little surprise ♡';
+});
 
 const birthdayAudio = document.getElementById('birthdayAudio');
 const musicToggle = document.getElementById('musicToggle');

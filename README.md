@@ -1,6 +1,6 @@
 # A Little Birthday Surprise
 
-A lightweight, responsive six-page birthday card demo for Maria. It runs directly in a browser and needs no install or build step. The third page plays an 8-photo, 32-second film with Nafiz’s own song.
+A lightweight, responsive seven-page birthday card for Maria. It runs directly in a browser and needs no install or build step. The third page plays an 8-photo, 32-second film with Nafiz’s own song. The final page has an animated envelope and a personal thank-you note.
 
 ## Open the demo
 
@@ -17,4 +17,8 @@ The Google Fonts link needs an internet connection; if you're offline, the page 
 - **Music:** The card tries to play `birthday-song.mp3` when it opens. If the browser blocks autoplay, tap the music control in the header; the video page also starts the song when Play is pressed. Replace that MP3 to use another track.
 - **Colors and layout:** Edit the CSS variables at the top of `style.css`.
 
-For sharing as a public link later, upload the `outputs` folder to a static hosting service. The files are plain HTML, CSS, and JavaScript.
+For a public link, upload the contents of this ZIP to the root of your static hosting repository. The files are plain HTML, CSS, and JavaScript.
+
+## Upload to GitHub Pages
+
+Unzip the supplied upload ZIP and upload the files and `photos` folder inside it to the repository root (the same level as `index.html`). Keep `birthday-song.mp3` beside `index.html` so the music can load.
