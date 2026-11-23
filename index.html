@@ -10,11 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="video.css">
+  <link rel="stylesheet" href="audio.css">
 </head>
 <body>
   <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
   <main class="shell">
-    <header class="topbar"><a class="brand" href="#page-1" aria-label="Back to beginning"><span class="brand-mark">♡</span> a little something</a><span class="top-note">MADE WITH LOVE <i>✦</i></span></header>
+    <header class="topbar"><a class="brand" href="#page-1" aria-label="Back to beginning"><span class="brand-mark">♡</span> a little something</a><button class="music-toggle" id="musicToggle" type="button" aria-label="Turn birthday music on" aria-pressed="false">♫ <span id="musicToggleLabel">Music off</span></button></header>
     <div class="progress" aria-label="Card progress"><div id="progressFill"></div></div>
     <div class="page-count"><span id="pageNumber">01</span><span class="count-line"></span><span>06</span></div>
     <section class="card" aria-live="polite">
@@ -22,10 +23,10 @@
       <div class="pages">
         <article class="page active" data-page="0">
           <div class="hero-art"><span class="spark s1">✦</span><span class="spark s2">✧</span><div class="cake"><div class="flame"></div><div class="candle"></div><div class="icing"></div><div class="cake-top"></div><div class="cake-body"><span class="berry b1">♥</span><span class="berry b2">♥</span><span class="berry b3">♥</span></div><div class="cake-plate"></div></div><span class="heart-float h1">♡</span><span class="heart-float h2">♡</span></div>
-          <p class="eyebrow">A LITTLE BIRTHDAY SURPRISE</p><h1>Today is all<br>about <em id="friendNameHero">you</em>.</h1><p class="lede">A tiny digital hug for someone who makes life a little brighter.</p><div class="scroll-cue">YOUR SURPRISE STARTS HERE <span>↓</span></div>
+          <p class="eyebrow">A LITTLE BIRTHDAY SURPRISE</p><h1>Today is all<br>about <em id="friendNameHero">you</em>.</h1><p class="lede">A tiny digital hug for someone who makes life a little brighter.</p><div class="scroll-cue">YOUR SURPRISE STARTS HERE <span>↓</span></div><p class="music-hint" id="musicHint" role="status">♫ Tap “Music off” to hear Maria’s birthday tune</p>
         </article>
         <article class="page" data-page="1"><div class="page-icon">✿</div><p class="eyebrow">A NOTE FOR YOUR DAY</p><h2>Happy Birthday,<br><em id="friendNameWish">dear friend</em>!</h2><div class="message-box"><p class="bangla" lang="bn">শুভ জন্মদিন! তোমার প্রতিটি দিন ভরে উঠুক আনন্দ, ভালোবাসা আর সুন্দর সব মুহূর্তে।</p><p>May your year ahead be full of little joys, brave dreams, and people who make you feel loved. You deserve all the good things coming your way.</p></div><span class="tiny-caption">আজকের দিনটা একদম তোমার ✨</span></article>
-        <article class="page video-page" data-page="2"><p class="eyebrow">A LITTLE FILM, JUST FOR YOU</p><h2>Maria’s birthday<br><em>moments.</em></h2><p class="lede compact">A few lovely snapshots, wrapped up with a little birthday music.</p><div class="video-frame"><canvas id="birthdayVideo" width="960" height="540" aria-label="Maria's birthday photo video"></canvas><div class="video-cover" id="videoCover"><span class="cover-heart">♡</span><strong>For Maria</strong><small>a little birthday film</small></div><div class="video-caption" id="videoCaption">MADE WITH LOVE ♡</div></div><div class="video-controls"><button class="play-video" id="playVideo"><span>▶</span> Play birthday video</button><button class="pause-video" id="pauseVideo" aria-label="Pause video" title="Pause">Ⅱ</button><span class="video-time" id="videoTime">00:00 / 00:32</span></div><p class="music-note">♪ &nbsp; Original, gentle birthday instrumental</p></article>
+        <article class="page video-page" data-page="2"><p class="eyebrow">A LITTLE FILM, JUST FOR YOU</p><h2>Maria’s birthday<br><em>moments.</em></h2><p class="lede compact">A few lovely snapshots, set to a song made with love.</p><div class="video-frame"><canvas id="birthdayVideo" width="960" height="540" aria-label="Maria's birthday photo video"></canvas><div class="video-cover" id="videoCover"><span class="cover-heart">♡</span><strong>For Maria</strong><small>a little birthday film</small></div><div class="video-caption" id="videoCaption">MADE WITH LOVE ♡</div></div><div class="video-controls"><button class="play-video" id="playVideo"><span>▶</span> Play birthday video</button><button class="pause-video" id="pauseVideo" aria-label="Pause video" title="Pause">Ⅱ</button><span class="video-time" id="videoTime">00:00 / 00:32</span></div><p class="music-note">♪ &nbsp; Nafiz’s song, just for Maria</p></article>
         <article class="page"><div class="page-icon">♡</div><p class="eyebrow">A LITTLE SOMETHING I MEAN</p><h2>So glad the<br>world has <em>you.</em></h2><div class="message-box personal"><p class="bangla" lang="bn">তোমার মতো বন্ধু পাওয়া সত্যিই অনেক ভাগ্যের। সবসময় এমন সুন্দর মনের মানুষ থেকো।</p><p>Thank you for being the kind of friend who makes ordinary days memorable. I hope this birthday brings you the same warmth and happiness you give to everyone around you.</p></div><div class="signature">With lots of love,<br><strong id="senderNameOne">your friend</strong></div></article>
         <article class="page"><div class="surprise-art"><div class="gift"><div class="gift-lid"></div><div class="gift-box"></div><div class="ribbon-v"></div><div class="ribbon-h"></div><div class="bow">∞</div></div><span class="confetti c1">✦</span><span class="confetti c2">✧</span><span class="confetti c3">♥</span><span class="confetti c4">✿</span></div><p class="eyebrow">MAKE A WISH</p><h2>Here’s to your<br><em>next chapter.</em></h2><p class="lede">May it be full of laughter, new adventures, and cake whenever you want it.</p><button class="wish-button" id="wishButton">Tap for a little sparkle <span>✦</span></button></article>
         <article class="page final-page"><div class="final-heart">♡</div><p class="eyebrow">AND ONE LAST THING...</p><h2>Happy Birthday,<br><em id="friendNameFinal">wonderful human</em>!</h2><p class="bangla final-bangla" lang="bn">অনেক অনেক ভালোবাসা আর শুভকামনা রইল তোমার জন্য।</p><p class="lede">Hope your day feels as lovely as you are.</p><div class="signature">Always cheering for you,<br><strong id="senderNameTwo">your friend</strong></div><button class="restart" id="restart">↺ &nbsp; Read it again</button></article>
@@ -36,6 +37,7 @@
     <footer class="bottom-note">A small celebration, made just for you <span>✦</span></footer>
   </main>
   <div class="toast" id="toast" role="status"></div>
+  <audio id="birthdayAudio" src="birthday-song.mp3" preload="auto" loop></audio>
   <script src="script.js"></script>
 </body>
 </html>
